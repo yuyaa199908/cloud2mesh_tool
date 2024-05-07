@@ -1,3 +1,4 @@
-[submodule "thirdparty/OBRG-Py"]
-	path = thirdparty/OBRG-Py
-	url = https://github.com/lupeterm/OBRG-Py.git
+
+[submodule "thirdparty/OBRG-Py_pcd"]
+	path = thirdparty/OBRG-Py_pcd
+	url = https://github.com/yuyaa199908/OBRG-Py_pcd.git
