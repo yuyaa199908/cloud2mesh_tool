@@ -1,0 +1,3 @@
+[submodule "thirdparty/OBRG-Py"]
+	path = thirdparty/OBRG-Py
+	url = https://github.com/lupeterm/OBRG-Py.git
