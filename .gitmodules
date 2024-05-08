@@ -2,3 +2,9 @@
 [submodule "thirdparty/OBRG-Py_pcd"]
 	path = thirdparty/OBRG-Py_pcd
 	url = https://github.com/yuyaa199908/OBRG-Py_pcd.git
+[submodule "thirdparty/Urban_PointCloud_Processing"]
+	path = thirdparty/Urban_PointCloud_Processing
+	url = https://github.com/Amsterdam-AI-Team/Urban_PointCloud_Processing
+[submodule "thirdparty/CloudCompare-PythonPlugin"]
+	path = thirdparty/CloudCompare-PythonPlugin
+	url = https://github.com/tmontaigu/CloudCompare-PythonPlugin.git
