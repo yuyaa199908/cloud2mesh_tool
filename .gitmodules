@@ -8,3 +8,12 @@
 [submodule "thirdparty/CloudCompare-PythonPlugin"]
 	path = thirdparty/CloudCompare-PythonPlugin
 	url = https://github.com/tmontaigu/CloudCompare-PythonPlugin.git
+[submodule "thirdparty/vlmaps"]
+	path = thirdparty/vlmaps
+	url = https://github.com/vlmaps/vlmaps.git
+[submodule "thirdparty/Octree-based-Region-Growing"]
+	path = thirdparty/Octree-based-Region-Growing
+	url = https://github.com/kangjie-ding/Octree-based-Region-Growing.git
+[submodule "thirdparty/PointCloudSegmentation"]
+	path = thirdparty/PointCloudSegmentation
+	url = https://github.com/xiaohulugo/PointCloudSegmentation.git
