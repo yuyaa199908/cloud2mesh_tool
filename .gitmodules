@@ -1,7 +1,4 @@
 
-[submodule "thirdparty/OBRG-Py_pcd"]
-	path = thirdparty/OBRG-Py_pcd
-	url = https://github.com/yuyaa199908/OBRG-Py_pcd.git
 [submodule "thirdparty/Urban_PointCloud_Processing"]
 	path = thirdparty/Urban_PointCloud_Processing
 	url = https://github.com/Amsterdam-AI-Team/Urban_PointCloud_Processing
@@ -17,3 +14,9 @@
 [submodule "thirdparty/PointCloudSegmentation"]
 	path = thirdparty/PointCloudSegmentation
 	url = https://github.com/xiaohulugo/PointCloudSegmentation.git
+[submodule "thirdparty/simpaSRG"]
+	path = thirdparty/simpaSRG
+	url = https://github.com/matu3ba/simpaSRG.git
+[submodule "thirdparty/OBRG-Py"]
+	path = thirdparty/OBRG-Py
+	url = https://github.com/lupeterm/OBRG-Py.git
