@@ -1,0 +1,13 @@
+k_search: 50
+min_cluster_size: 50
+max_cluster_size: 100000000
+number_of_neighbours: 500
+distance_of_neighbours: 0.0001
+smoothness_threshold_rad: 0.5 #30deg
+curvature_threshold: 0.0067 #0.02  #2e = 0.02
+residual_threshold: 0.01 # 3e = 0.045
+smooth_mode_flag: true
+curvature_test_flag: true
+residual_test_flag: true
+output_dir: /home/aichi2204/Documents/bkl2go/20240412-library2/aichi-20240412-library2_croped_mini_1/4
+is_coloring: false
