@@ -1,0 +1,15 @@
+k_search: 50
+min_cluster_size: 25
+max_cluster_size: 100000000
+number_of_neighbours: 100000
+distance_of_neighbours: 0.2
+smoothness_threshold_rad: 0.5
+curvature_threshold: 0
+residual_threshold: 0
+smooth_mode_flag: true
+curvature_test_flag: false
+residual_test_flag: false
+output_dir: /home/aichi2204/ros2_ws/test/pcl-test/data/map_all_removed/21
+is_coloring: true
+
+# n=50, d=0.2[m], nth=0.5[rad]

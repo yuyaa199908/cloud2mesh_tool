@@ -1,0 +1,1 @@
+./segment_poux /home/aichi2204/Documents/bkl2go/20240412-library2/aichi-20240412-library2_croped_minimini_1.pcd ../config/mini_t/best1.yaml #../config/mini_f/best2.yaml ../config/mini_f/best3.yaml ../config/mini_f/best4.yaml  ../config/mini_f/best5.yaml 
