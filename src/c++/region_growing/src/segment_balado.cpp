@@ -63,32 +63,22 @@ void split_pcd(pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud, rg_param rg_param)
     std::cout << "saving output" << std::endl;
     if(rg_param.is_coloring){
         pcl::PointCloud <pcl::PointXYZRGB>::Ptr colored_cloud = reg.getColoredCloud();
-        std::string output_path = rg_param.output_dir + "/"  + "all.pcd";
-        pcl::io::savePCDFileASCII (output_path , *colored_cloud);
+        std::string output_path = rg_param.output_dir + "/"  + "all.pcd"; 
+        pcl::io::savePCDFileASCII (output_path , *colored_cloud);  //error
     }
-    else{   
-        pcl::ExtractIndices<pcl::PointXYZRGB> extract;
-        for (size_t i = 0; i < clusters.size(); ++i) {
-            pcl::PointCloud<pcl::PointXYZRGB>::Ptr extracted_cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
-            pcl::PointIndices::Ptr ind(new pcl::PointIndices(clusters[i]));
+    
+    pcl::ExtractIndices<pcl::PointXYZRGB> extract;
+    for (size_t i = 0; i < clusters.size(); ++i) {
+        pcl::PointCloud<pcl::PointXYZRGB>::Ptr extracted_cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
+        pcl::PointIndices::Ptr ind(new pcl::PointIndices(clusters[i]));
 
-            extract.setInputCloud (cloud);
-            extract.setIndices (ind);
-            extract.filter (*extracted_cloud);
-            extract.setNegative(false);
+        extract.setInputCloud (cloud);
+        extract.setIndices (ind);
+        extract.filter (*extracted_cloud);
+        extract.setNegative(false);
 
-            std::string output_path = rg_param.output_dir + "/"  + std::to_string(i) + ".pcd";
-            pcl::io::savePCDFileASCII(output_path, *extracted_cloud);
-        }
-
-        // pcl::PointCloud<pcl::PointXYZRGB>::Ptr extracted_cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
-        // pcl::PointIndices::Ptr ind(new pcl::PointIndices(unassigned));
-        // extract.setInputCloud (cloud);
-        // extract.setIndices (ind);
-        // extract.filter (*extracted_cloud);
-        // extract.setNegative(false);
-        // std::string output_path = rg_param.output_dir + "/"  + "unassigned.pcd";
-        // pcl::io::savePCDFileASCII(output_path, *extracted_cloud);
+        std::string output_path = rg_param.output_dir + "/"  + std::to_string(i) + ".pcd";
+        pcl::io::savePCDFileASCII(output_path, *extracted_cloud);
     }
 }
 

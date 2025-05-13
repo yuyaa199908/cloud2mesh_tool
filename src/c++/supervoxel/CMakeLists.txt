@@ -10,3 +10,6 @@ add_definitions(${PCL_DEFINITIONS})
 
 add_executable (supervoxel_clustering src/supervoxel_clustering.cpp)
 target_link_libraries (supervoxel_clustering ${PCL_LIBRARIES})
+
+add_executable (octree_based src/octree_based.cpp)
+target_link_libraries (octree_based ${PCL_LIBRARIES})

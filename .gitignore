@@ -1,0 +1,10 @@
+# large point cloud files
+*.pcd
+*.las
+*.ply
+*.bin
+src/c++/supervoxel/out/
+src/c++/region_growing/data/
+# c++ build files
+src/c++/region_growing/build/
+src/c++/supervoxel/build/

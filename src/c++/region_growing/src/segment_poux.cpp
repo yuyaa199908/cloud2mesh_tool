@@ -70,10 +70,11 @@ void split_pcd(pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud, rg_param rg_param)
     std::cout << "saving output" << std::endl;
     if(rg_param.is_coloring){
         pcl::PointCloud <pcl::PointXYZRGB>::Ptr colored_cloud = reg.getColoredCloud();
-        std::string output_path = rg_param.output_dir + "/"  + "all.pcd";
+        std::string output_path = rg_param.output_dir + "/"  + "all.pcd";   //
+        std::cout << "output_path: " << output_path << std::endl;
         pcl::io::savePCDFileASCII (output_path , *colored_cloud);
     }
-    else{   
+    else{
         pcl::ExtractIndices<pcl::PointXYZRGB> extract;
         for (size_t i = 0; i < clusters.size(); ++i) {
             pcl::PointCloud<pcl::PointXYZRGB>::Ptr extracted_cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
@@ -85,16 +86,8 @@ void split_pcd(pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud, rg_param rg_param)
             extract.setNegative(false);
             std::string output_path = rg_param.output_dir + "/"  + std::to_string(i) + ".pcd";
             pcl::io::savePCDFileASCII(output_path, *extracted_cloud);
-        }
 
-        // pcl::PointCloud<pcl::PointXYZRGB>::Ptr extracted_cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
-        // pcl::PointIndices::Ptr ind(new pcl::PointIndices(unassigned));
-        // extract.setInputCloud (cloud);
-        // extract.setIndices (ind);
-        // extract.filter (*extracted_cloud);
-        // extract.setNegative(false);
-        // std::string output_path = rg_param.output_dir + "/"  + "unassigned.pcd";
-        // pcl::io::savePCDFileASCII(output_path, *extracted_cloud);
+        }
     }
 }
 
@@ -163,7 +156,7 @@ int main(int argc, char** argv)
     std::vector<std::thread> threads;
     
     for(auto& rg_param: rg_params) {
-        threads.emplace_back(split_pcd, cloud,rg_param);
+        threads.emplace_back(split_pcd, cloud, rg_param);
     }
 
     // すべてのスレッドの終了を待機
